@@ -40,10 +40,12 @@
     <!-- formulario de contacto -->
     <section class="contacto-a">
       <div class="container">
-        <form onsubmit="sendEmail(); reset(); return false;">
+        <!-- <form onsubmit="sendEmail(); reset(); return false;"> -->
+        <form method="POST" name="contact" data-netlify="true">
           <div class="text-fields">
             <input
               id="name"
+              name="name"
               type="text"
               class="text-input name-input"
               placeholder="Nombre"
@@ -52,12 +54,14 @@
             <input
               id="email"
               type="email"
+              name="email"
               class="text-input email-input"
               placeholder="Correo"
               required
             />
             <input
               id="phone"
+              name="phone"
               type="text"
               class="phone-input text-input"
               placeholder="Teléfono"
@@ -65,6 +69,7 @@
             />
             <textarea
               id="message"
+              name="message"
               class="text-input message-input"
               placeholder="Escríbeme"
               required
@@ -110,7 +115,7 @@
       </div>
     </footer>
 
-    <!-- enviar forma -->
+    <!-- enviar forma
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
       function sendEmail() {
@@ -130,6 +135,6 @@
             document.getElementById("message").value,
         }).then((message) => alert(message));
       }
-    </script>
+    </script> -->
   </body>
 </html>
